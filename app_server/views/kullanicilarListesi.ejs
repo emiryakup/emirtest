@@ -1,0 +1,35 @@
+
+<!--<h1>Kullanıcılar Listesi</h1>-->
+
+<div class="container">
+<table class="table table-hover">
+<thead class="thead-dark">
+    <tr>
+        <th>#</th>
+        <th>isim</th>
+        <th>soyisim</th>
+        <th>email</th>
+        <th>kullaniciadi</th>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+<%for(var i=0;i<kullanicilar.length;i++){%>
+    <% if(i%2==1){%>
+    <tr class="info">
+    <% } else { %>
+        <tr class="warning">
+    <%}%>
+        <th><%=i%></th>
+        <th><%=kullanicilar[i].ad%> </th>
+        <th><%=kullanicilar[i].soyad%> </th>
+        <th><%=kullanicilar[i].email%> </th>
+        <th><%=kullanicilar[i].kullaniciAdi%> </th>
+        <th><a href="kullaniciSil/<%=kullanicilar[i].kullaniciAdi%>">Sil</a></th>
+    </tr>
+<% } %>
+</tbody>
+
+</table>
+
+</div>
