@@ -32,6 +32,7 @@ var kullanici=require('./app_server/models/kullanici');
         console.log('Başarılı');
     }
 });*/
+var port=process.env.port || 8000;
 
+app.listen(port);
 
-app.listen(8000);
